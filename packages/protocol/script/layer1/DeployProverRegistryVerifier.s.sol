@@ -3,11 +3,12 @@ pragma solidity ^0.8.24;
 
 import "../../test/shared/DeployCapability.sol";
 import "../../contracts/layer1/verifiers/ProverRegistryVerifier.sol";
+import "../../contracts/layer1/automata-attestation/AutomataDcapV3Attestation.sol";
 
 contract DeployProverRegistryVerifier is DeployCapability {
     uint256 public deployerPrivKey = vm.envUint("PRIVATE_KEY");
     address public rollupAddressManager = vm.envAddress("ROLLUP_ADDRESS_MANAGER");
-    address public attestationVerifier = vm.envAddress("ATTESTATION_VERIFIER");
+    address public attestationVerifier = address(new AutomataDcapV3Attestation());
     uint256 public attestationValiditySeconds = vm.envUint("ATTEST_VALIDITY_SECONDS");
     uint256 public maxBlockNumberDiff = vm.envUint("MAX_BLOCK_NUMBER_DIFF");
 
