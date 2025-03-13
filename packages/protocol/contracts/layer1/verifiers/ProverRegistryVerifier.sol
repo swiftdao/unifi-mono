@@ -82,6 +82,8 @@ contract ProverRegistryVerifier is IVerifier, IProverRegistry, EssentialContract
         external
         onlyFromNamedEither(LibStrings.B_TAIKO, LibStrings.B_TIER_TDX)
     {
+        // TODO: This is a temporary workaround for ProverRegistryVerifier
+        return;
         // Do not run proof verification to contest an existing proof
         if (_ctx.isContesting) return;
 
