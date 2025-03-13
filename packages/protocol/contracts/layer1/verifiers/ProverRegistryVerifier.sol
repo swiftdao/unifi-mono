@@ -80,7 +80,7 @@ contract ProverRegistryVerifier is IVerifier, IProverRegistry, EssentialContract
         TaikoData.TierProof calldata _proof
     )
         external
-        onlyFromNamedEither(LibStrings.B_TAIKO, LibStrings.B_TIER_TDX)
+        // onlyFromNamedEither(LibStrings.B_TAIKO, LibStrings.B_TIER_TDX)
     {
         // TODO: This is a temporary workaround for ProverRegistryVerifier
         return;
