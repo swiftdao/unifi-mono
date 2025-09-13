@@ -1,6 +1,6 @@
 module github.com/taikoxyz/taiko-mono
 
-go 1.23
+go 1.24.0
 
 require (
 	github.com/btcsuite/btcd/btcec/v2 v2.3.4
@@ -39,7 +39,7 @@ require (
 	github.com/testcontainers/testcontainers-go v0.34.0
 	github.com/urfave/cli/v2 v2.27.5
 	golang.org/x/exp v0.0.0-20240808152545-0cdaa3abc0fa
-	golang.org/x/sync v0.10.0
+	golang.org/x/sync v0.17.0
 	gopkg.in/go-playground/assert.v1 v1.2.1
 	gopkg.in/yaml.v3 v3.0.1
 	gorm.io/datatypes v1.2.4
